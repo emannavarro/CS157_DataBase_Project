@@ -1,6 +1,6 @@
 package com.example.databaseProject.studentsystem.controller;
 
-import com.example.databaseProject.studentsystem.model.Student;
+import com.example.databaseProject.studentsystem.model.Customer;
 import com.example.databaseProject.studentsystem.service.StudentService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,20 +9,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/student")
-@CrossOrigin
+@RequestMapping("api/v1/customer")
+// @CrossOrigin
 public class StudentController {
+    private final StudentService studentService;
+
     @Autowired
-    private StudentService studentService;
-
-    @PostMapping("/add")
-    public String add(@RequestBody Student student){
-        studentService.saveStudent(student);
-        return "New student is added";
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
     }
 
-    @GetMapping("/getAll")
-    public List<Student> list(){
-        return studentService.getAllStudents();
+    // @PostMapping("/add")
+    // public String add(@RequestBody Customer student) {
+    // studentService.saveStudent(student);
+    // return "New student is added";
+    // }
+
+    @GetMapping
+    public List<Customer> list() {
+        return studentService.getCustomers();
     }
+
 }
