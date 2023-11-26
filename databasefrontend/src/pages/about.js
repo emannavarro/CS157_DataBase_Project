@@ -22,8 +22,8 @@ class About extends React.Component{
 				<nav>
 					<ul>
 						<li><a href="/">Home</a></li>
-						<li><a href="generic.html" class="active">Shop</a></li>
-						<li><a href="elements.html">Login</a></li>
+						<li><a href="/shop" class="active">Shop</a></li>
+						<li><a href="/login">Login</a></li>
 					</ul>
 				</nav>
 			</header>

@@ -20,7 +20,7 @@ class index extends React.Component{
 					<nav>
 						<ul  class="links">
 							<li><a href="/">Home Page</a></li>
-							<li><a href="#one">Shop</a></li>
+							<li><a href="/shop">Shop</a></li>
 							<li><a href="/about">Abouts</a></li>
 							<li><a href="/login">Login</a></li>
 						</ul>

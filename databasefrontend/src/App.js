@@ -2,6 +2,7 @@ import Index from './pages/index';
 import About from './pages/about';
 import Login from './pages/login';
 import Register from './pages/register';
+import Shop from './pages/shop';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 
@@ -30,6 +31,8 @@ loadScript('assets/js/main.js')
           <Route path="/" element={<Index />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
           
         </Routes>
       </BrowserRouter> 

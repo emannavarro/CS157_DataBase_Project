@@ -21,7 +21,7 @@ class Login extends React.Component{
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="generic.html">Shop</a></li>
+                <li><a href="/shop">Shop</a></li>
                 <li><a href="/login"  class="active">Login</a></li>
             </ul>
         </nav>
@@ -45,7 +45,7 @@ class Login extends React.Component{
                             </div>
                             <ul class="menu">
                                 <li> Forgot <a href="http://html5up.net">Password?</a></li>
-                                <li> Create your <a href="http://html5up.net">Groovy account</a></li>
+                                <li> Create your <a href="/register">Groovy account</a></li>
                             </ul>
                         </div>
                    
