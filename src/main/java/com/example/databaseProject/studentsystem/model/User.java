@@ -1,21 +1,31 @@
 package com.example.databaseProject.studentsystem.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-public class Customer {
+@Table(name = "Users")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String customerID, firstName, lastName, streetAddress, city, stateAbbreviation,
-            zipcode, country, emailAddress;
+    private int userID;
+    private String firstName;
+    private String lastName;
+    private String streetAddress;
+    private String city;
+    private String stateAbbreviation;
+    private String zipcode;
+    private String country;
+    private String emailAddress;
 
-    public Customer() {
+    public User() {
     }
 
-    public Customer(String customerID,
+    public User(int userID,
             String firstName,
             String lastName,
             String streetAddress,
@@ -25,7 +35,7 @@ public class Customer {
             String country,
             String emailAddress) {
 
-        this.customerID = customerID;
+        this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.streetAddress = streetAddress;
@@ -37,7 +47,7 @@ public class Customer {
     }
 
     // Constructor without ID b/c db creates ID
-    public Customer(
+    public User(
             String firstName,
             String lastName,
             String streetAddress,
@@ -57,12 +67,12 @@ public class Customer {
         this.emailAddress = emailAddress;
     }
 
-    public String getCustomerID() {
-        return customerID;
+    public int getuserID() {
+        return userID;
     }
 
-    public void setCustomerID(String customerID) {
-        this.customerID = customerID;
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public String getFirstName() {
@@ -131,7 +141,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer [customerID=" + customerID + ", firstName=" + firstName + ", lastName=" + lastName
+        return "User [userID=" + userID + ", firstName=" + firstName + ", lastName=" + lastName
                 + ", streetAddress=" + streetAddress + ", city=" + city + ", stateAbbreviation=" + stateAbbreviation
                 + ", zipcode=" + zipcode + ", country=" + country + ", emailAddress=" + emailAddress + "]";
     }
