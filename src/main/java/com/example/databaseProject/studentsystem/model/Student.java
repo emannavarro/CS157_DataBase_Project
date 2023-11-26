@@ -2,11 +2,13 @@ package com.example.databaseProject.studentsystem.model;
 
 
 import javax.persistence.Entity;
+import jakarta.persistence.Table;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Table(name = "Student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
